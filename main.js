@@ -9,15 +9,15 @@ Solution: This one has already been complete for you.
 */
 
 function test() {
- var string ="This Works!";
- return string;
+    var string = "This Works!";
+    return string;
 }
 test();
 
 var string = "doing this on my own";
 
 function output(string) {
-  return string;
+    return string;
 }
 output(string);
 
@@ -33,15 +33,15 @@ Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 */
 
 
-var originalArray = [1,2,3,4];
+var originalArray = [1, 2, 3, 4];
 
 function sum(array) {
-  var sumArray = 0;
+    var sumArray = 0;
 
-  for (var i = 0; i < array.length; i++) {
-     sumArray += array[i];
-  }
-  return sumArray;
+    for (var i = 0; i < array.length; i++) {
+        sumArray += array[i];
+    }
+    return sumArray;
 }
 sum(originalArray);
 
@@ -58,36 +58,36 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
-var singleArray = [1,2,3,4,5];
+var singleArray = [1, 2, 3, 4, 5];
 
 function double(array) {
-  var doubleArray = [];
+    var doubleArray = [];
 
-  for (var i = 0; i < array.length; i++) {
-    doubleArray[i] = array[i] * 2;
-  }
-  return doubleArray;
+    for (var i = 0; i < array.length; i++) {
+        doubleArray[i] = array[i] * 2;
+    }
+    return doubleArray;
 }
 
 double(singleArray);
 
 
-var multiArray = [1,2,3,4];
+var multiArray = [1, 2, 3, 4];
 
 function tripleAndSum(array) {
-  var tripleArray = [];
-  var tripleSum = 0;
-  var tripleString = "";
+    var tripleArray = [];
+    var tripleSum = 0;
+    var tripleString = "";
 
-  for (var i = 0; i < array.length; i++) {
-     tripleArray[i] = array[i] *3
-     tripleSum += array[i];
-     tripleString += array[i];
-  }
+    for (var i = 0; i < array.length; i++) {
+        tripleArray[i] = array[i] * 3
+        tripleSum += array[i];
+        tripleString += array[i];
+    }
 
-console.log(tripleArray);
-console.log(tripleSum);
-console.log(tripleString);
+    console.log(tripleArray);
+    console.log(tripleSum);
+    console.log(tripleString);
 
 }
 
@@ -111,37 +111,37 @@ Examples:
 */
 
 
-var arrayMultiply = [7,8,9,10];
+var arrayMultiply = [7, 8, 9, 10];
 
 function multiply(array) {
-var arrayMultiplied = [];
-for (var i = 0; i < array.length; i++) {
-   arrayMultiplied[i] = array[i] * 5;
-}
+    var arrayMultiplied = [];
+    for (var i = 0; i < array.length; i++) {
+        arrayMultiplied[i] = array[i] * 5;
+    }
 
 
-return arrayMultiplied;
+    return arrayMultiplied;
 }
 multiply(arrayMultiply);
 
 
 
 
-var arrayMath = [7,8,9,10];
+var arrayMath = [7, 8, 9, 10];
 
 function multiply(array) {
-var arrayMultiplied = [];
-var arrayDivided =[];
-var arraySubtracted = [];
+    var arrayMultiplied = [];
+    var arrayDivided = [];
+    var arraySubtracted = [];
 
-for (var i = 0; i < array.length; i++) {
-   arrayMultiplied[i] = array[i] * 5;
-   arrayDivided[i] = array[i] / 5;
-   arraySubtracted[i] = array[i] - 5;
-}
-console.log(arrayMultiplied);
-console.log(arrayDivided);
-console.log(arraySubtracted);
+    for (var i = 0; i < array.length; i++) {
+        arrayMultiplied[i] = array[i] * 5;
+        arrayDivided[i] = array[i] / 5;
+        arraySubtracted[i] = array[i] - 5;
+    }
+    console.log(arrayMultiplied);
+    console.log(arrayDivided);
+    console.log(arraySubtracted);
 
 
 }
@@ -163,14 +163,14 @@ Example: if you pass it "abc" then it should return "aabbcc"
 var singleLetters = "abc";
 
 function double(string) {
-  var doubleString = "";
-  for (var i = 0; i < string.length; i++) {
-    doubleString += string[i] + string[i];
-    console.log(doubleString);
-  }
+    var doubleString = "";
+    for (var i = 0; i < string.length; i++) {
+        doubleString += string[i] + string[i];
+        console.log(doubleString);
+    }
 
 
-  return doubleString;
+    return doubleString;
 }
 
 double(singleLetters);
@@ -193,18 +193,18 @@ NOTE: you can assume each input will be the same length
 */
 
 
-var arrayOne = ['a','b','c','d','e','f','g','h'];
-var arrayTwo = [1,2,3,4,5,6,7,8];
+var arrayOne = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h'];
+var arrayTwo = [1, 2, 3, 4, 5, 6, 7, 8];
 
 function interleave(array1, array2) {
-  var arrayTotal = [];
-  for (var i = 0; i < array1.length; i++) {
-    arrayTotal.push(array1[i],array2[i]);
+    var arrayTotal = [];
+    for (var i = 0; i < array1.length; i++) {
+        arrayTotal.push(array1[i], array2[i]);
 
 
-  }
+    }
 
-  return arrayTotal;
+    return arrayTotal;
 }
 interleave(arrayOne, arrayTwo)
 
@@ -231,14 +231,14 @@ var count = 0;
 
 
 function createRange(string, times) {
-var greetTotal = [];
-while (count < times) {
-  greetTotal.push(greet);
-  count++;
-}
+    var greetTotal = [];
+    while (count < times) {
+        greetTotal.push(greet);
+        count++;
+    }
 
 
-return greetTotal;
+    return greetTotal;
 }
 createRange(greet, num);
 
@@ -253,14 +253,14 @@ var count = 0;
 
 
 function createRange(string, times) {
-var greetTotal = '';
-while (count < times) {
-  greetTotal += greet;
-  count++;
-}
+    var greetTotal = '';
+    while (count < times) {
+        greetTotal += greet;
+        count++;
+    }
 
 
-return greetTotal;
+    return greetTotal;
 }
 createRange(greet, num);
 
@@ -284,15 +284,15 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 var arrayArray = ['quick', "brown", "fox"];
 
 function flipArray(array) {
-var arrayObject = {};
-for (var i = 0; i < array.length; i++) {
-   arrayObject[array[i]] = i;
+    var arrayObject = {};
+    for (var i = 0; i < array.length; i++) {
+        arrayObject[array[i]] = i;
 
-}
+    }
 
 
 
-return arrayObject;
+    return arrayObject;
 }
 flipArray(arrayArray)
 
@@ -315,7 +315,9 @@ should return { 2014: "Horse", 2015: "Sheep" }
 */
 
 var arrayTwoElements = [
-[2014, "horse"], [2015, "sheep"]];
+    [2014, "horse"],
+    [2015, "sheep"]
+];
 
 function arraysToObject(array) {
     var objectTwoElements = {};
@@ -338,16 +340,28 @@ arraysToObject(arrayTwoElements);
 CHALLENGE
 ----------------------------------------
 
-Write function named reverseString that will reverse a string without calling the built-in .split or .reverse methods
+Write function named reverseString that will reverse a string
+ without calling the built-in .split or .reverse methods
 
 Example:
 
 If you pass it "hello" then it should return "olleh"
 */
 
+var stringRev = "hello";
+
+function stringReverse(string) {
+    var reverseString = "";
+    for (var i = 4; i >= 0; i--) {
+        reverseString += string[i]
+        console.log(reverseString);
+    }
+return reverseString;
+}
 
 
 
+stringReverse(stringRev);
 
 
 
@@ -456,7 +470,6 @@ If you pass "you" it should return 2
 
 
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -552,7 +565,6 @@ Example:
 If you pass 0,2 it should return false because the only number between 0 and 2 is 1
 If you pass 0,6 it should return true because between 0 and six (the numbers 1,2,3,4,5) there are three odds - 1, 3 and 5
 */
-
 
 
 
@@ -683,7 +695,6 @@ If you pass 2,"d" it should return {"d": true, "dd": true}
 
 
 
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -745,10 +756,6 @@ If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
 
 
 
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -780,8 +787,6 @@ Example:
 
 If you pass [0,-3,2,5] it should return -3
 */
-
-
 
 
 
@@ -910,11 +915,6 @@ If you pass {1999: 4036, 2000: 7654} it should return '2000'
 
 
 
-
-
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -926,7 +926,6 @@ Example:
 
 If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
 */
-
 
 
 
