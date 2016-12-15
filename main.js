@@ -111,6 +111,41 @@ Examples:
 */
 
 
+var arrayMultiply = [7,8,9,10];
+
+function multiply(array) {
+var arrayMultiplied = [];
+for (var i = 0; i < array.length; i++) {
+   arrayMultiplied[i] = array[i] * 5;
+}
+
+
+return arrayMultiplied;
+}
+multiply(arrayMultiply);
+
+
+
+
+var arrayMath = [7,8,9,10];
+
+function multiply(array) {
+var arrayMultiplied = [];
+var arrayDivided =[];
+var arraySubtracted = [];
+
+for (var i = 0; i < array.length; i++) {
+   arrayMultiplied[i] = array[i] * 5;
+   arrayDivided[i] = array[i] / 5;
+   arraySubtracted[i] = array[i] - 5;
+}
+console.log(arrayMultiplied);
+console.log(arrayDivided);
+console.log(arraySubtracted);
+
+
+}
+multiply(arrayMath);
 
 
 
