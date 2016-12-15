@@ -58,10 +58,40 @@ Write function named doubleNumbers that will take an array of numbers and return
 Example: if you pass it [1,2,3] then it should return [2,4,6]
 */
 
+var singleArray = [1,2,3,4,5];
+
+function double(array) {
+  var doubleArray = [];
+
+  for (var i = 0; i < array.length; i++) {
+    doubleArray[i] = array[i] * 2;
+  }
+  return doubleArray;
+}
+
+double(singleArray);
 
 
+var multiArray = [1,2,3,4];
 
+function tripleAndSum(array) {
+  var tripleArray = [];
+  var tripleSum = 0;
+  var tripleString = "";
 
+  for (var i = 0; i < array.length; i++) {
+     tripleArray[i] = array[i] *3
+     tripleSum += array[i];
+     tripleString += array[i];
+  }
+
+console.log(tripleArray);
+console.log(tripleSum);
+console.log(tripleString);
+
+}
+
+tripleAndSum(multiArray);
 
 
 
