@@ -150,9 +150,6 @@ multiply(arrayMath);
 
 
 
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
@@ -163,9 +160,20 @@ Write function named doubleLetters that will take a string and double every lett
 Example: if you pass it "abc" then it should return "aabbcc"
 */
 
+var singleLetters = "abc";
+
+function double(string) {
+  var doubleString = "";
+  for (var i = 0; i < string.length; i++) {
+    doubleString += string[i] + string[i];
+    console.log(doubleString);
+  }
 
 
+  return doubleString;
+}
 
+double(singleLetters);
 
 
 
@@ -185,8 +193,20 @@ NOTE: you can assume each input will be the same length
 */
 
 
+var arrayOne = ['a','b','c','d','e','f','g','h'];
+var arrayTwo = [1,2,3,4,5,6,7,8];
+
+function interleave(array1, array2) {
+  var arrayTotal = [];
+  for (var i = 0; i < array1.length; i++) {
+    arrayTotal.push(array1[i],array2[i]);
 
 
+  }
+
+  return arrayTotal;
+}
+interleave(arrayOne, arrayTwo)
 
 
 
