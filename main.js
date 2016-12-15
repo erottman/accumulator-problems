@@ -272,7 +272,8 @@ createRange(greet, num);
 CHALLENGE
 ----------------------------------------
 
-Write function named flipArray that will take an array and return an object where the keys are the items and the values are the indices
+Write function named flipArray that will take an array and return an
+// object where the keys are the items and the values are the indices
 
 Example:
 
@@ -280,8 +281,20 @@ If you pass it ["quick", "brown", "fox"] then it should return { "quick": 0, "br
 */
 
 
+var arrayArray = ['quick', "brown", "fox"];
+
+function flipArray(array) {
+var arrayObject = {};
+for (var i = 0; i < array.length; i++) {
+   arrayObject[array[i]] = i;
+
+}
 
 
+
+return arrayObject;
+}
+flipArray(arrayArray)
 
 
 
