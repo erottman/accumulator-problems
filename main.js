@@ -304,16 +304,29 @@ flipArray(arrayArray)
 CHALLENGE
 ----------------------------------------
 
-Write function named arraysToObject that will take an array of 2-element arrays, and return an object of key/value pairs
+Write function named arraysToObject that will take an array of 2-element arrays, and
+return an object of key/value pairs
 
 Example:
 
-If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it should return { 2014: "Horse", 2015: "Sheep" }
+If you pass it [[2014, "Horse"], [2015, "Sheep"]] then it
+should return { 2014: "Horse", 2015: "Sheep" }
 
 */
 
+var arrayTwoElements = [
+[2014, "horse"], [2015, "sheep"]];
 
+function arraysToObject(array) {
+    var objectTwoElements = {};
 
+    for (var i = 0; i < array.length; i++) {
+        objectTwoElements[array[i][0]] = array[i][1];
+        console.log(objectTwoElements)
+    }
+    return objectTwoElements;
+}
+arraysToObject(arrayTwoElements);
 
 
 
