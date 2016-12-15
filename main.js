@@ -225,8 +225,44 @@ Example: if you pass it 4 and "Hello" then it should return ["Hello", "Hello", "
 */
 
 
+var greet = "Hello";
+var num = 4;
+var count = 0;
 
 
+function createRange(string, times) {
+var greetTotal = [];
+while (count < times) {
+  greetTotal.push(greet);
+  count++;
+}
+
+
+return greetTotal;
+}
+createRange(greet, num);
+
+
+
+
+
+
+var greet = "Hello";
+var num = 4;
+var count = 0;
+
+
+function createRange(string, times) {
+var greetTotal = '';
+while (count < times) {
+  greetTotal += greet;
+  count++;
+}
+
+
+return greetTotal;
+}
+createRange(greet, num);
 
 
 
