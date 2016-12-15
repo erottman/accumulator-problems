@@ -3,8 +3,8 @@
 SAMPLE
 ----------------------------------------
 
-Challenge: Write function named test that returns the string "This Works!". 
-Solution: This one has already been complete for you. 
+Challenge: Write function named test that returns the string "This Works!".
+Solution: This one has already been complete for you.
 
 */
 
@@ -12,7 +12,14 @@ function test() {
  var string ="This Works!";
  return string;
 }
+test();
 
+var string = "doing this on my own";
+
+function output(string) {
+  return string;
+}
+output(string);
 
 
 /*
@@ -26,9 +33,17 @@ Example: if you pass it [1,2,3] then it should return 6 (which is 1 + 2 + 3)
 */
 
 
+var originalArray = [1,2,3,4];
 
+function sum(array) {
+  var sumArray = 0;
 
-
+  for (var i = 0; i < array.length; i++) {
+     sumArray += array[i];
+  }
+  return sumArray;
+}
+sum(originalArray);
 
 
 
@@ -794,4 +809,4 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 
-// 
+//
