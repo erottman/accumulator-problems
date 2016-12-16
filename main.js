@@ -526,20 +526,36 @@ sumLetters(stringLetters);
 
 
 
-
-
-
 /*
 ----------------------------------------
 CHALLENGE
 ----------------------------------------
 
-Write a function named countVowels that returns the number of vowels in a string, excluding "y"
+Write a function named countVowels that returns the number of
+vowels in a string, excluding "y"
 
 Example:
 
 If you pass "you" it should return 2
 */
+
+var stringVowels = "Learning javascript is good for you";
+var vowels = "aeiouAEIOU"
+var vcount = 0;
+
+
+function countVowels(string) {
+  for (var i = 0; i < string.length; i++) {
+    if(vowels.indexOf(string[x]) !== -1 ) {
+      vcount += 1;
+    }
+  }
+  return vcount;
+
+};
+
+countVowels(stringVowels);
+
 
 
 
