@@ -480,20 +480,17 @@ If you pass "aba" it should return false
 var stringAE = "aba";
 
 function allEqual(string) {
-    var stringAENew = "";
-    for (var i = 0; i < string.length; i++) {
-        if (string[0] === string[i]) {
-            stringAENew += string[i];
-            console.log(stringAENew)
+    for (var i = 1; i < string.length; i++) {
+        if (string[0] !== string[i]) {
+          return false;
         }
 
     }
-    return stringAENew === string;
+    return true;
 }
 
 
 allEqual(stringAE)
-
 
 
 
@@ -505,13 +502,25 @@ allEqual(stringAE)
 CHALLENGE
 ----------------------------------------
 
-Write a function named sumLetters that returns the sum of every character in the string
+Write a function named sumLetters that returns the sum
+of every character in the string
 
 Example:
 
 If you pass "45" it should return 9
 If you pass "246" it should return 10
 */
+
+var stringLetters = "246";
+
+function sumLetters(string) {
+      var stringNumbers = 0;
+    for (var i = 0; i < string.length; i++) {
+      stringNumbers += parseInt(string[i], 10);
+    }
+    return stringNumbers;
+}
+sumLetters(stringLetters);
 
 
 
