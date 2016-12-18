@@ -648,16 +648,16 @@ var stringMap = "Hello";
  function letterMap(string) {
    var stringMapObject = {};
    for (var i = 0; i < string.length; i++) {
-     stringMapObject[string[i]] = [i];
+     if(typeof stringMapObject[string[i]] === 'undefined') {
+       stringMapObject[string[i]] = 1;
+     }else {
+       stringMapObject[string[i]] = stringMapObject[string[i]] + 1;
+     }
    }
-
-
    return stringMapObject;
  }
 
  letterMap(stringMap);
-
-
 
 
 
@@ -666,7 +666,8 @@ var stringMap = "Hello";
 CHALLENGE
 ----------------------------------------
 
-Write a function named letterCount that takes a string and returns an object with the letters and the number of their occurrences
+Write a function named letterCount that takes a string and returns an
+object with the letters and the number of their occurrences
 
 Example:
 
@@ -675,10 +676,24 @@ If you pass "Hello" it should return {"H": 1, "e": 1, "l": 2, "o": 1}
 */
 
 
+var stringCount = "Hello";
+
+function letterCount(string) {
+var newObejctCount = {};
+var count = 0;
+for (var i = 0; i < string.length; i++) {
+  if(stringMapObject[string[i]].indexOf(stringCount[i] !== 1)
+}
 
 
 
+return newObejctCount;
+}
+letterCount(stringCount);
 
+
+
+ (vowels.indexOf(string[i]) !== -1)
 
 
 
