@@ -482,7 +482,7 @@ var stringAE = "aba";
 function allEqual(string) {
     for (var i = 1; i < string.length; i++) {
         if (string[0] !== string[i]) {
-          return false;
+            return false;
         }
 
     }
@@ -514,9 +514,9 @@ If you pass "246" it should return 10
 var stringLetters = "246";
 
 function sumLetters(string) {
-      var stringNumbers = 0;
+    var stringNumbers = 0;
     for (var i = 0; i < string.length; i++) {
-      stringNumbers += parseInt(string[i], 10);
+        stringNumbers += parseInt(string[i], 10);
     }
     return stringNumbers;
 }
@@ -550,12 +550,12 @@ var vcount = 0;
 
 
 function countVowels(string) {
-  for (var i = 0; i < string.length; i++) {
-    if(vowels.indexOf(string[i]) !== -1 ) {
-      vcount += 1;
+    for (var i = 0; i < string.length; i++) {
+        if (vowels.indexOf(string[i]) !== -1) {
+            vcount += 1;
+        }
     }
-  }
-  return vcount;
+    return vcount;
 
 };
 
@@ -581,20 +581,18 @@ NOTE: do not use the builtin `split` method
 var stringSplit = "you";
 
 function split(string) {
-  var stringArray = [];
+    var stringArray = [];
 
-  for (var i = 0; i < string.length; i++) {
-    stringArray[i] = string[i];
-  }
-  return stringArray;
+    for (var i = 0; i < string.length; i++) {
+        stringArray[i] = string[i];
+    }
+    return stringArray;
 }
 
 split(stringSplit);
 
 
 var stringSplitMethod = stringSplit.split("");
-
-
 
 
 
@@ -614,7 +612,18 @@ If you pass "Hello" it should return [ 72, 101, 108, 108, 111 ]
 */
 
 
+var codePointsString = "Hello";
 
+function getCodePoints(string) {
+    var newCodePoint = "";
+    for (var i = 0; i < string.length; i++) {
+        newCodePoint += string.codePointAt(i) + ",";
+    }
+
+    return newCodePoint;
+}
+
+getCodePoints(codePointsString);
 
 
 
