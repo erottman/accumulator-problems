@@ -538,6 +538,11 @@ Example:
 
 If you pass "you" it should return 2
 */
+// indexOf() str.indexOf(searchValue[, fromIndex])
+// search value -string representing value to seach for
+// from index: the index to which search in the string,
+// default 0 to search entire string. if a -1 returned it means
+// false
 
 var stringVowels = "Learning javascript is good for you";
 var vowels = "aeiouAEIOU"
@@ -546,7 +551,7 @@ var vcount = 0;
 
 function countVowels(string) {
   for (var i = 0; i < string.length; i++) {
-    if(vowels.indexOf(string[x]) !== -1 ) {
+    if(vowels.indexOf(string[i]) !== -1 ) {
       vcount += 1;
     }
   }
@@ -555,12 +560,6 @@ function countVowels(string) {
 };
 
 countVowels(stringVowels);
-
-
-
-
-
-
 
 
 
@@ -579,7 +578,21 @@ If you pass "you" it should return ["y", "o", "u"]
 NOTE: do not use the builtin `split` method
 */
 
+var stringSplit = "you";
 
+function split(string) {
+  var stringArray = [];
+
+  for (var i = 0; i < string.length; i++) {
+    stringArray[i] = string[i];
+  }
+  return stringArray;
+}
+
+split(stringSplit);
+
+
+var stringSplitMethod = stringSplit.split("");
 
 
 
