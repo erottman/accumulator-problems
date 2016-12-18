@@ -634,7 +634,8 @@ getCodePoints(codePointsString);
 CHALLENGE
 ----------------------------------------
 
-Write a function named letterMap that takes a string and returns an object of the letters and their positions in the string
+Write a function named letterMap that takes a string and returns an
+object of the letters and their positions in the string
 
 Example:
 
@@ -642,8 +643,19 @@ If you pass "Yo" it should return {Y: 0, o: 1}
 If you pass "Hello" it should return {H: 0, e: 1, l: 3, o: 4}
 */
 
+var stringMap = "Hello";
+
+ function letterMap(string) {
+   var stringMapObject = {};
+   for (var i = 0; i < string.length; i++) {
+     stringMapObject[string[i]] = [i];
+   }
 
 
+   return stringMapObject;
+ }
+
+ letterMap(stringMap);
 
 
 
