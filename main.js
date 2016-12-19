@@ -793,23 +793,23 @@ function threeOdds(num1, num2) {
     If you pass "b", 3 it should return "bb"
     */
 
-var numberCreate = 3;
-var letterCreate = "a";
-var counter = 0;
+    var numberCreate = 3;
+    var letterCreate = "a";
+    var counter = 0;
 
 
-function createString(letter, number) {
-var newNumLetCreate = "";
-while (counter < number) {
-  newNumLetCreate += letter;
-    counter++;
-    
-}
-return newNumLetCreate;
+    function createString(letter, number) {
+        var newNumLetCreate = "";
+        while (counter < number) {
+            newNumLetCreate += letter;
+            counter++;
 
-}
+        }
+        return newNumLetCreate;
 
-createString(letterCreate, numberCreate);
+    }
+
+    createString(letterCreate, numberCreate);
 
 
 
@@ -830,6 +830,18 @@ createString(letterCreate, numberCreate);
     */
 
 
+    var numFactorial = 4;
+
+
+    function factorial(num) {
+      var factored = numFactorial;
+        for (var i = (num - 1); i >= 1; i--) {
+            factored *= i;
+            console.log(factored);
+        }
+        return factored;
+    }
+    factorial(numFactorial);
 
 
 
