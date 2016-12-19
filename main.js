@@ -864,7 +864,7 @@ function threeOdds(num1, num2) {
     function arrayOfNumbers(num) {
         var numArrays = [1];
         for (var i = 1; i < num; i++) {
-          numArrays[i] = i + 1;
+            numArrays[i] = i + 1;
         }
 
         return numArrays;
@@ -873,23 +873,45 @@ function threeOdds(num1, num2) {
 
 
 
-
-
-
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named evenOdd that takes a number and returns an object with the numbers and whether they are even or odd
+    Write a function named evenOdd that takes a number and returns an
+    object with the numbers and whether they are even or odd
 
     Example:
 
     If you pass 1,4 it should return {"1": "odd", "2": "even", "3": "odd", "4": "even"}
     */
 
+    function evenOdd(num1, num2) {
+        var evenOddObject = {};
 
+        if (num1 === 0 && num2 === 0) {
+            return evenOddObject;
+        } else if (num1 > num2) {
+            for (var i = num2; i <= num1; i++) {
+                if (i % 2 === 0) {
+                    evenOddObject[i] = "even";
+                } else {
+                    evenOddObject[i] = "odd;"
+                }
+            }
+        } else {
+            for (var i = num1; i <= num2; i++) {
+                if (i % 2 === 0) {
+                    evenOddObject[i] = "even";
+                } else {
+                    evenOddObject[i] = "odd;"
+                }
+            }
+        }
+        return evenOddObject;
+    };
+
+    evenOdd(4, 1);
 
 
 
