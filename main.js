@@ -1054,15 +1054,13 @@ function threeOdds(num1, num2) {
 
 
 
-
-
-
         /*
         ----------------------------------------
         CHALLENGE
         ----------------------------------------
 
-        Write a function named some that takes an array and returns a string with the elements joined by commas, with a trailing 'and'
+        Write a function named some that takes an array and returns a
+        string with the elements joined by commas, with a trailing 'and'
 
         Example:
 
@@ -1070,11 +1068,24 @@ function threeOdds(num1, num2) {
         If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
         */
 
+        arraySome3 = ["sue", "will"];
+
+        function some3(array) {
+          var newString = array.toString();
+          }
+          console.log(newString);
+        }
+        some3(arraySome3);
 
 
+        arraySome4 = ["bob", "latka"];
 
+      function some4(array) {
+          var newString = array.join(" and ");
+          console.log(newString);
+      }
 
-
+      some4(arraySome4);
 
 
 
