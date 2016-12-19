@@ -915,16 +915,13 @@ function threeOdds(num1, num2) {
 
 
 
-
-
-
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named growingKeys that takes a number and a string and returns an object where the keys are that string, repeated one more each time
+    Write a function named growingKeys that takes a number and a string and returns an object
+    where the keys are that string, repeated one more each time
 
     Example:
 
@@ -932,271 +929,288 @@ function threeOdds(num1, num2) {
     */
 
 
+    function growingKeys(num, string) {
+        var newObject = {};
 
+        for (var i = 1; i < num; i++) {
+            var key = "";
 
+        for (var j = 0; j < i; j++) {
+            key += string;
+          }
+            newObject[key] = true;
+          }
 
+    return newObject;
+  }
 
 
+growingKeys(4, "d")
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named every that takes an array and a value and returns true if every element of the array equals the value
 
-    Example:
 
-    If you pass [1,1], 1 it should return true
-    If you pass [1,2], 1 it should return false
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named every that takes an array and a value and returns true if every element of the array equals the value
 
+Example:
 
+If you pass [1,1], 1 it should return true
+If you pass [1,2], 1 it should return false
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named some that takes an array and a value and returns true if at least one element of the array equals the value
 
-    Example:
 
-    If you pass [1,2], 1 it should return true
-    If you pass [3,2], 1 it should return false
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named some that takes an array and a value and returns true if at least one element of the array equals the value
 
+Example:
 
+If you pass [1,2], 1 it should return true
+If you pass [3,2], 1 it should return false
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named some that takes an array and returns a string with the elements joined by commas, with a trailing 'and'
 
-    Example:
 
-    If you pass ["Sue", "Will"] it should return "Sue and Will"
-    If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named some that takes an array and returns a string with the elements joined by commas, with a trailing 'and'
 
+Example:
 
+If you pass ["Sue", "Will"] it should return "Sue and Will"
+If you pass ["Sue", "Will", "Rachel"] it should return "Sue, Will and Rachel"
+*/
 
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named acronym that takes an array and returns a string that is an acronym of the items in the array
 
-    Example:
 
-    If you pass ["Sue", "Will"] it should return "SW"
-    If you pass ["Java", Script", "Object", "Notation"] it should return "JSON"
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named acronym that takes an array and returns a string that is an acronym of the items in the array
 
+Example:
 
+If you pass ["Sue", "Will"] it should return "SW"
+If you pass ["Java", Script", "Object", "Notation"] it should return "JSON"
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named min that takes an array and returns minimum value of the array
 
-    Example:
 
-    If you pass [0,-3,2,5] it should return -3
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named min that takes an array and returns minimum value of the array
 
+Example:
 
+If you pass [0,-3,2,5] it should return -3
+*/
 
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named index that takes an array of objects, and a property name, and returns an object where the keys are the specified property
 
-    Example:
 
-    If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should return {1: {id: 1, name: "Joe"}, 2: {id: 2, name: "Sue"}}
 
-    */
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named index that takes an array of objects, and a property name, and returns an object where the keys are the specified property
 
+Example:
 
+If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should return {1: {id: 1, name: "Joe"}, 2: {id: 2, name: "Sue"}}
 
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named invert that takes an object and returns an object where the keys and values have been inverted
 
-    Example:
 
-    If you pass {id: 1, name: "Joe"} it should return {1: "id", Joe: "name"}
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named invert that takes an object and returns an object where the keys and values have been inverted
 
+Example:
 
+If you pass {id: 1, name: "Joe"} it should return {1: "id", Joe: "name"}
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named addSignature that takes an object and a name, and returns an object where
 
-    - the keys are suffixed with "-signed"
-    - the values are suffixed with " - <name>"
 
-    Example:
 
-    If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
-    */
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named addSignature that takes an object and a name, and returns an object where
 
+- the keys are suffixed with "-signed"
+- the values are suffixed with " - <name>"
 
+Example:
 
+If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named pairs that takes an object and returns an array of strings of key/value pairs
 
-    Example:
 
-    If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named pairs that takes an object and returns an array of strings of key/value pairs
 
+Example:
 
+If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named sumValues that takes an object and returns the sum of the values
 
-    Example:
 
-    If you pass {a: 1, b: 2} it should return 3
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named sumValues that takes an object and returns the sum of the values
 
+Example:
 
+If you pass {a: 1, b: 2} it should return 3
+*/
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
 
-    Example:
 
-    If you pass {1999: 4036, 2000: 7654} it should return '2000'
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
 
+Example:
 
+If you pass {1999: 4036, 2000: 7654} it should return '2000'
+*/
 
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
 
-    Example:
 
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
 
+Example:
 
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
+*/
 
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
 
-    Example:
 
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-    */
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named containsValue that takes an object and a value and returns true if the object contains the value
 
+Example:
 
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
+*/
 
 
 
 
-    //
+
+
+
+
+
+//
