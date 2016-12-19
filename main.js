@@ -834,7 +834,7 @@ function threeOdds(num1, num2) {
 
 
     function factorial(num) {
-      var factored = numFactorial;
+        var factored = numFactorial;
         for (var i = (num - 1); i >= 1; i--) {
             factored *= i;
             console.log(factored);
@@ -845,15 +845,13 @@ function threeOdds(num1, num2) {
 
 
 
-
-
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named arrayOfNumbers that takes a number and returns an array of all the numbers between 1 and that number, inclusive
+    Write a function named arrayOfNumbers that takes a number and returns an array of
+    all the numbers between 1 and that number, inclusive
 
     Example:
 
@@ -861,6 +859,17 @@ function threeOdds(num1, num2) {
     If you pass 3 it should return [1,2,3]
     */
 
+    var numOriginal = 3;
+
+    function arrayOfNumbers(num) {
+        var numArrays = [1];
+        for (var i = 1; i < num; i++) {
+          numArrays[i] = i + 1;
+        }
+
+        return numArrays;
+    }
+    arrayOfNumbers(numOriginal);
 
 
 
