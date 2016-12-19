@@ -794,10 +794,22 @@ function threeOdds(num1, num2) {
     */
 
 var numberCreate = 3;
-var letterCreate =
+var letterCreate = "a";
+var counter = 0;
 
 
+function createString(letter, number) {
+var newNumLetCreate = "";
+while (counter < number) {
+  newNumLetCreate += letter;
+    counter++;
+    
+}
+return newNumLetCreate;
 
+}
+
+createString(letterCreate, numberCreate);
 
 
 
