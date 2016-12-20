@@ -1139,12 +1139,12 @@ function threeOdds(num1, num2) {
 
 
     function acronym2(array) {
-      var string = "";
+        var string = "";
 
-      for (var i = 0; i < array.length; i++) {
-        string += array[i][0];
-      }
-      return string;
+        for (var i = 0; i < array.length; i++) {
+            string += array[i][0];
+        }
+        return string;
     }
 
 
@@ -1166,12 +1166,12 @@ function threeOdds(num1, num2) {
     // Math.min.apply(null, numbers);
 
 
-var arrayMin = [0, -3,2, 5];
+    var arrayMin = [0, -3, 2, 5];
 
-function min(array) {
-return Math.min.apply(Math,arrayMin);
-}
-min(arrayMin)
+    function min(array) {
+        return Math.min.apply(Math, arrayMin);
+    }
+    min(arrayMin)
 
 
 
@@ -1192,25 +1192,31 @@ min(arrayMin)
 
     */
 
-var arrayObjects = [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}];
+    var arrayObjects = [{
+        id: 1,
+        name: "Joe"
+    }, {
+        id: 2,
+        name: "Sue"
+    }];
 
 
-function index(array, prop) {
-var object = {};
+    function index(array, prop) {
+        var object = {};
 
-for (var i = 0; i < array.length; i++) {
-  if(prop === "id") {
-    object[array[i].id] = array[i];
-  }else {
-    object[array[i].name] = array[i];
-  }
+        for (var i = 0; i < array.length; i++) {
+            if (prop === "id") {
+                object[array[i].id] = array[i];
+            } else {
+                object[array[i].name] = array[i];
+            }
 
 
-}
-return object;
-}
+        }
+        return object;
+    }
 
-index(arrayObjects, "id");
+    index(arrayObjects, "id");
 
 
 
@@ -1231,56 +1237,73 @@ index(arrayObjects, "id");
     */
 
 
-var objectInvert = {id: 1, name: "Joe"};
+    var objectInvert = {
+        id: 1,
+        name: "Joe"
+    };
 
-function invert(object) {
-  newObject = {};
-  for (var key in object) {
-      newObject[object[key]] = key;
+    function invert(object) {
+        newObject = {};
+        for (var key in object) {
+            newObject[object[key]] = key;
 
+
+        }
     }
-  }
 
 
-  return newObject;
+    return newObject;
 }
 invert(objectInvert);
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Write a function named addSignature that takes an object and a name, and returns an object where
+Write a function named addSignature that takes an object and a name,
+and returns an object where
 
-    - the keys are suffixed with "-signed"
-    - the values are suffixed with " - <name>"
+- the keys are suffixed with "-signed"
+- the values are suffixed with " - <name>"
 
-    Example:
+Example:
 
-    If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
-    */
+If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "foo - Fred"}
+*/
 
 
+var objectSignature = {"contract": "foo"};
 
+function addSignature(object, name) {
+    var newObject = {};
+    for (var key in object) {
+      var value = object[key];
+      key = key + "-signed";
 
+      newObject[key] = value + " - " + name;
+    }
+}
+return newObject;
+}
 
+addSignature(objectSignature, "Fred");
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named pairs that takes an object and returns an array of strings of key/value pairs
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Example:
+Write a function named pairs that takes an object and returns an array of strings of key/value pairs
 
-    If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
-    */
+Example:
 
+If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
+*/
 
 
 
@@ -1288,18 +1311,18 @@ invert(objectInvert);
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named sumValues that takes an object and returns the sum of the values
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Example:
+Write a function named sumValues that takes an object and returns the sum of the values
 
-    If you pass {a: 1, b: 2} it should return 3
-    */
+Example:
 
+If you pass {a: 1, b: 2} it should return 3
+*/
 
 
 
@@ -1307,18 +1330,18 @@ invert(objectInvert);
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Example:
+Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
 
-    If you pass {1999: 4036, 2000: 7654} it should return '2000'
-    */
+Example:
 
+If you pass {1999: 4036, 2000: 7654} it should return '2000'
+*/
 
 
 
@@ -1327,18 +1350,18 @@ invert(objectInvert);
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Example:
+Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
 
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-    */
+Example:
 
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
+*/
 
 
 
@@ -1347,18 +1370,18 @@ invert(objectInvert);
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
 
-    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Example:
+Write a function named containsValue that takes an object and a value and returns true if the object contains the value
 
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-    */
+Example:
 
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
+*/
 
 
 
@@ -1367,4 +1390,5 @@ invert(objectInvert);
 
 
 
-    //
+
+//
