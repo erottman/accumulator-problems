@@ -1089,6 +1089,27 @@ function threeOdds(num1, num2) {
 
 
 
+
+
+      arraySome5 = ['sally', "jesse", "rachel"];
+
+      function some5(array) {
+          var newString = "";
+
+          for (var i = 0; i < array.length; i++) {
+              if (i < array.length - 1) {
+                  newString += array[i] + ", ";
+                  console.log(newString);
+              } else {
+                  newString += "and " + array[i];
+                  console.log(newString);
+              }
+          }
+      }
+      some5(arraySome5);
+
+
+
         /*
         ----------------------------------------
         CHALLENGE
