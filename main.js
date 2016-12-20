@@ -1274,15 +1274,17 @@ If you pass {"contract": "foo"}, "Fred" it should return {"contract-signed": "fo
 */
 
 
-var objectSignature = {"contract": "foo"};
+var objectSignature = {
+    "contract": "foo"
+};
 
 function addSignature(object, name) {
     var newObject = {};
     for (var key in object) {
-      var value = object[key];
-      key = key + "-signed";
+        var value = object[key];
+        key = key + "-signed";
 
-      newObject[key] = value + " - " + name;
+        newObject[key] = value + " - " + name;
     }
 }
 return newObject;
@@ -1298,13 +1300,29 @@ addSignature(objectSignature, "Fred");
 CHALLENGE
 ----------------------------------------
 
-Write a function named pairs that takes an object and returns an array of strings of key/value pairs
+Write a function named pairs that takes an object and returns an array of s
+trings of key/value pairs
 
 Example:
 
 If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
 */
 
+var objectPairs = {
+    name: "Will",
+    age: 24
+};
+
+function pairs(object) {
+    newArray = [];
+    for (var key in object) {
+        newArray.push(key + "-" + object[key]);
+
+        }
+
+        return newArray;
+    }
+    pairs(objectPairs);
 
 
 
@@ -1312,56 +1330,17 @@ If you pass {name: "Will", age: 24} it should return ["name - will", "age - 24"]
 
 
 
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
 
-Write a function named sumValues that takes an object and returns the sum of the values
+    Write a function named sumValues that takes an object and returns the sum of the values
 
-Example:
+    Example:
 
-If you pass {a: 1, b: 2} it should return 3
-*/
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
-
-Example:
-
-If you pass {1999: 4036, 2000: 7654} it should return '2000'
-*/
-
-
-
-
-
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
-
-Example:
-
-If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-*/
+    If you pass {a: 1, b: 2} it should return 3
+    */
 
 
 
@@ -1370,18 +1349,17 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
 
 
 
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
 
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
+    Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
 
-Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+    Example:
 
-Example:
-
-If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-*/
+    If you pass {1999: 4036, 2000: 7654} it should return '2000'
+    */
 
 
 
@@ -1391,4 +1369,44 @@ If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
 
 
 
-//
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
+
+    Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
+
+    Example:
+
+    If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
+    */
+
+
+
+
+
+
+
+
+
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
+
+    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+
+    Example:
+
+    If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
+    */
+
+
+
+
+
+
+
+
+
+    //
