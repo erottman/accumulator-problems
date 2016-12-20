@@ -1428,14 +1428,13 @@ function sumValues(object) {
 
 
 
-
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+    Write a function named containsValue that takes an object and a
+    value and returns true if the object contains the value
 
     Example:
 
@@ -1443,7 +1442,26 @@ function sumValues(object) {
     */
 
 
+    var objectContainsValue = {
+         1999: 4036,
+         2000: 7654
+     }
 
+     function containsValue(object, num) {
+         var result;
+         var sum = 0;
+         for (var value in object) {
+             sum += object[value];
+                 if (sum === num) {
+                    return true;
+                 }
+
+             }
+             return false;
+         }
+
+
+     containsValue(objectkeyForValue, 4036);
 
 
 
