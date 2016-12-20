@@ -1368,66 +1368,86 @@ function sumValues(object) {
     */
 
     var objectBiggest = {
-      1999: 4036,
-      2000: 7654
-  };
+        1999: 4036,
+        2000: 7654
+    };
 
-  function biggestProperty(object) {
-      var result = 0;
-      var sum = 0;
-      for (var value in object) {
-          sum += object[value];
-          if (sum > result) {
-              result = sum;
-              console.log(result);
-          }
-      }
-      return result;
-  }
+    function biggestProperty(object) {
+        var result = 0;
+        var sum = 0;
+        for (var value in object) {
+            sum += object[value];
+            if (sum > result) {
+                result = sum;
+                console.log(result);
+            }
+        }
+        return result;
+    }
 
-biggestProperty(objectBiggest);
-
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
-
-Example:
-
-If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-*/
+    biggestProperty(objectBiggest);
 
 
 
 
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
+
+    Write a function named keyForValue that takes an object and a value and
+    returns the name of the property that matches that value
+
+    Example:
+
+    If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
+    */
+
+    var objectkeyForValue = {
+         1999: 4036,
+         2000: 7654
+     }
+
+     function keyForValue(object, num) {
+         var result;
+         var sum = 0;
+         for (var value in object) {
+             sum += object[value];
+                 if (sum === num) {
+                     result = value;
+                 }
+
+             }
+             return result;
+         }
 
 
-
-
-
-/*
-----------------------------------------
-CHALLENGE
-----------------------------------------
-
-Write a function named containsValue that takes an object and a value and returns true if the object contains the value
-
-Example:
-
-If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-*/
-
-
-
-
+     keyForValue(objectkeyForValue, 4036);
 
 
 
 
 
-//
+
+
+    /*
+    ----------------------------------------
+    CHALLENGE
+    ----------------------------------------
+
+    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+
+    Example:
+
+    If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
+    */
+
+
+
+
+
+
+
+
+
+    //
