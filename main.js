@@ -1217,13 +1217,13 @@ index(arrayObjects, "id");
 
 
 
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named invert that takes an object and returns an object where the keys and values have been inverted
+    Write a function named invert that takes an object and returns an object
+    where the keys and values have been inverted
 
     Example:
 
@@ -1231,10 +1231,20 @@ index(arrayObjects, "id");
     */
 
 
+var objectInvert = {id: 1, name: "Joe"};
+
+function invert(object) {
+  newObject = {};
+  for (var key in object) {
+      newObject[object[key]] = key;
+
+    }
+  }
 
 
-
-
+  return newObject;
+}
+invert(objectInvert);
 
 
     /*
