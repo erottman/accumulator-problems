@@ -1138,6 +1138,16 @@ function threeOdds(num1, num2) {
 
 
 
+    function acronym2(array) {
+      var string = "";
+
+      for (var i = 0; i < array.length; i++) {
+        string += array[i][0];
+      }
+      return string;
+    }
+
+
 
 
 
@@ -1153,8 +1163,15 @@ function threeOdds(num1, num2) {
 
     If you pass [0,-3,2,5] it should return -3
     */
+    // Math.min.apply(null, numbers);
 
 
+var arrayMin = [0, -3,2, 5];
+
+function min(array) {
+return Math.min.apply(Math,arrayMin);
+}
+min(arrayMin)
 
 
 
