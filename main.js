@@ -1177,21 +1177,40 @@ min(arrayMin)
 
 
 
-
-
     /*
     ----------------------------------------
     CHALLENGE
     ----------------------------------------
 
-    Write a function named index that takes an array of objects, and a property name, and returns an object where the keys are the specified property
+    Write a function named index that takes an array of objects, and a
+    property name, and returns an object where the keys are the specified property
 
     Example:
 
-    If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should return {1: {id: 1, name: "Joe"}, 2: {id: 2, name: "Sue"}}
+    If you pass [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}] it should
+    return {1: {id: 1, name: "Joe"}, 2: {id: 2, name: "Sue"}}
 
     */
 
+var arrayObjects = [{id: 1, name: "Joe"}, {id: 2, name: "Sue"}];
+
+
+function index(array, prop) {
+var object = {};
+
+for (var i = 0; i < array.length; i++) {
+  if(prop === "id") {
+    object[array[i].id] = array[i];
+  }else {
+    object[array[i].name] = array[i];
+  }
+
+
+}
+return object;
+}
+
+index(arrayObjects, "id");
 
 
 
