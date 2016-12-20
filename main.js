@@ -1318,39 +1318,39 @@ function pairs(object) {
     for (var key in object) {
         newArray.push(key + "-" + object[key]);
 
-        }
-
-        return newArray;
     }
-    pairs(objectPairs);
+
+    return newArray;
+}
+pairs(objectPairs);
 
 
 
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
-    Write a function named sumValues that takes an object and returns the sum of the values
+Write a function named sumValues that takes an object and returns the sum of the values
 
-    Example:
+Example:
 
-    If you pass {a: 1, b: 2} it should return 3
-    */
+If you pass {a: 1, b: 2} it should return 3
+*/
 
-var objectSumValues = {a: 1, b: 2};
+var objectSumValues = {
+    a: 1,
+    b: 2
+};
 
 function sumValues(object) {
-  var sum = 0;
-  for (var value in object) {
-    sum += object[value];
+    var sum = 0;
+    for (var value in object) {
+        sum += object[value];
 
 
-}
-sumValues(objectSumValues);
-
-
-
+    }
+    sumValues(objectSumValues);
 
 
 
@@ -1359,52 +1359,48 @@ sumValues(objectSumValues);
     CHALLENGE
     ----------------------------------------
 
-    Write a function named biggestProperty that takes an object and returns the name of the property with the highest value
+    Write a function named biggestProperty that takes an object and returns the
+    name of the property with the highest value
 
     Example:
 
     If you pass {1999: 4036, 2000: 7654} it should return '2000'
     */
 
+    var objectBiggest = {
+      1999: 4036,
+      2000: 7654
+  };
+
+  function biggestProperty(object) {
+      var result = 0;
+      var sum = 0;
+      for (var value in object) {
+          sum += object[value];
+          if (sum > result) {
+              result = sum;
+              console.log(result);
+          }
+      }
+      return result;
+  }
+
+biggestProperty(objectBiggest);
 
 
 
 
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
 
+Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
 
+Example:
 
-
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
-
-    Write a function named keyForValue that takes an object and a value and returns the name of the property that matches that value
-
-    Example:
-
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
-    */
-
-
-
-
-
-
-
-
-
-    /*
-    ----------------------------------------
-    CHALLENGE
-    ----------------------------------------
-
-    Write a function named containsValue that takes an object and a value and returns true if the object contains the value
-
-    Example:
-
-    If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
-    */
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return '1999'
+*/
 
 
 
@@ -1414,4 +1410,24 @@ sumValues(objectSumValues);
 
 
 
-    //
+/*
+----------------------------------------
+CHALLENGE
+----------------------------------------
+
+Write a function named containsValue that takes an object and a value and returns true if the object contains the value
+
+Example:
+
+If you pass {1999: 4036, 2000: 7654} and 4036, it should return true
+*/
+
+
+
+
+
+
+
+
+
+//
