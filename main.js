@@ -1326,10 +1326,6 @@ function pairs(object) {
 
 
 
-
-
-
-
     /*
     ----------------------------------------
     CHALLENGE
@@ -1342,7 +1338,16 @@ function pairs(object) {
     If you pass {a: 1, b: 2} it should return 3
     */
 
+var objectSumValues = {a: 1, b: 2};
 
+function sumValues(object) {
+  var sum = 0;
+  for (var value in object) {
+    sum += object[value];
+
+
+}
+sumValues(objectSumValues);
 
 
 
